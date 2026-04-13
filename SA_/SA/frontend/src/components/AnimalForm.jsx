@@ -16,7 +16,7 @@ export default function AnimalForm({ onAnimalAdded }) {
       return;
     }
 
-    // BUG 10: Envia 'idade' como string. O backend espera um número (mas possui um bug de verificação rigorosa).
+    // Envia 'idade' como string. O backend espera um número (mas possui um bug de verificação rigorosa).
     await postAnimal({ name, species, age, price: Number(price) });
 
     setName("");

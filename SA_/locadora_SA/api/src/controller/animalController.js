@@ -16,8 +16,8 @@ export const createAnimal = async (req, res) => {
 
     const { name, species, age, price } = req.body;
 
-    // BUG 5: Vulnerável a injeção de SQL (interpolação direta)
-    // Dica: Use marcadores de posição (?)
+    // Vulnerável a injeção de SQL (interpolação direta)
+    // Lembrete: Use marcadores de posição (?)
     const query = `INSERT INTO animals (name, species, age, price) VALUES ('${name}', '${species}', ${age}, ${price})`;
 
     const [result] = await pool.query(query);
@@ -32,7 +32,7 @@ export const deleteAnimal = async (req, res) => {
   try {
     const [result] = await pool.query("DELETE FROM animals WHERE id = ?", [id]);
 
-    // BUG 6: Retorna 200 OK mesmo se o ID não existir (affectedRows === 0)
+    // Retorna 200 OK mesmo se o ID não existir (affectedRows === 0)
     res.json({ message: "Animal deleted successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });

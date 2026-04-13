@@ -11,7 +11,7 @@ export default function AnimalList({ refreshTrigger }) {
 
   const handleDelete = async (id) => {
     await removeAnimal(id);
-    // BUG 11: A atualização otimista falha se os tipos de ID não corresponderem (string vs. número)
+    // A atualização otimista falha se os tipos de ID não corresponderem (string vs. número)
     setAnimals(animals.filter((a) => a.id !== id));
   };
 
@@ -19,7 +19,7 @@ export default function AnimalList({ refreshTrigger }) {
     <div className="grid grid-cols-3 gap-4">
       {animals.map((animal) => (
         <div key={animal.id} className="border p-4 rounded shadow">
-          {/* BUG 12: Erro de diferenciação entre maiúsculas e minúsculas. Usando 'Name' em vez de 'name' */}
+          {/* Erro de diferenciação entre maiúsculas e minúsculas. Usando 'Name' em vez de 'name' */}
           <h3 className="font-bold text-xl">{animal.Name}</h3>
 
           <p>Species: {animal.species}</p>

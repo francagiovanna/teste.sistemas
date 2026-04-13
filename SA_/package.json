@@ -1,0 +1,26 @@
+{
+  "name": "desenv.sistemas.back",
+  "version": "1.0.0",
+  "description": "Repositório com os programas e materiais gerados no decorrer do semestre 2026/1 em Desenv. de Sistemas no Senai Floripa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francagiovanna/desenv.sistemas.Back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/francagiovanna/desenv.sistemas.Back/issues"
+  },
+  "homepage": "https://github.com/francagiovanna/desenv.sistemas.Back#readme",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
