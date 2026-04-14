@@ -20,6 +20,7 @@
   "homepage": "https://github.com/francagiovanna/desenv.sistemas.Back#readme",
   "devDependencies": {
     "@types/node": "^25.5.0",
+    "jest": "^30.3.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
